@@ -1,43 +1,43 @@
-# react-native-web
-Build react-native and web app with [dva] and [antd-mobile].
+# ReactNativeWeb
+使用 [dva] 和 [antd-mobile] 构建 ReactNative 应用和网页应用
 
-English | [中文文档]
+[English] | 中文文档
 
-## Structure
+## 目录结构
 ```sh
-├── App.js              # native entry
-├── index.css           # web global style
-├── index.ejs           # web html entry
-├── index.js            # web js entry
-├── router.js           # web router
-├── assets              # assets
+├── App.js              # react-native 入口文件
+├── index.css           # web 全局样式
+├── index.ejs           # web html 入口
+├── index.js            # web js 入口
+├── router.js           # web 路由
+├── assets              # 公共资源文件
 │   └── yay.jpg
-├── components          # common components
+├── components          # 公共组件
 │   ├── Counter.js
 │   ├── DrawerLeft.js
 │   ├── Header.js
 │   ├── Text.js
-│   ├── Text.native.js  # native uses the .native.js suffix
+│   ├── Text.native.js  # react-native 优先匹配 .native.js 后缀
 │   ├── TodoList.js
 │   ├── Touch.js
 │   └── Touch.native.js
-├── models              # dva models
+├── models              # 公共 dva 模型
 │   ├── counter.js
 │   ├── index.js
 │   └── todo.js
-├── pages               # native pages
+├── pages               # react-native 页面
 │   └── IndexPage.js
-├── routes              # web pages
+├── routes              # web 页面
 │   ├── IndexPage.js
 │   └── IndexPage.less
-├── services            # api services
+├── services            # 公共 api 服务
 │   └── example.js
-└── utils               # useful utils
+└── utils               # 公共工具类
     ├── dva.js
     ├── rcform.js
     └── request.js
 ```
-## Scripts
+## 运行脚本
 ```sh
 npm run start     # start react native packager
 npm run android   # run android debug apk into devices
@@ -47,7 +47,7 @@ npm run web       # start web app
 npm run build     # build web app
 npm run lint      # lint the code
 ```
-## Platform
+## 支持平台
 ```js
 function platform() {
   if (!window.platform)
@@ -55,7 +55,7 @@ function platform() {
   else return window.platform; // ios|android
 }
 ```
-## Preview
+## 界面预览
 
 ### Web
 ![](https://rawgit.com/ZevenFang/react-native-web/screen/web-todos.png)
@@ -67,7 +67,6 @@ function platform() {
 ![](https://rawgit.com/ZevenFang/react-native-web/screen/ios-todos.png)
 ![](https://rawgit.com/ZevenFang/react-native-web/screen/ios-counter.png)
 
-
 [dva]: https://github.com/dvajs/dva
 [antd-mobile]: https://mobile.ant.design/docs/react/introduce-cn
-[中文文档]: https://github.com/ZevenFang/react-native-web/blob/master/README_CN.md
+[English]: https://github.com/ZevenFang/react-native-web/blob/master/README.md
