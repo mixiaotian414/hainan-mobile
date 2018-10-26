@@ -9,7 +9,7 @@ export default function ({ className = '',title, ...restProps }) {
   );
   return (
     <div style={{ padding: '0' }}>
-      <WingBlank><PlaceHolder title={title}  /></WingBlank>
+      <PlaceHolder title={title}  />
     </div>
   );
 }

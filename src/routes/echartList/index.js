@@ -42,14 +42,7 @@ export default class EchartList extends React.Component {
           <List.Item arrow="horizontal">三亚分行</List.Item>
         </DatePicker>
         <WhiteSpace  />
-        <PlaceHolder title="存款趋势"/>
-        <WingBlank> <LineComponent/></WingBlank>
-        <WhiteSpace  />
-        <PlaceHolder title="交易构成"/>
-        <WingBlank><ChartWithEventComponent/></WingBlank>
-        <WhiteSpace   />
-        <PlaceHolder title="债券购买"/>
-        <WingBlank><DynamicChartComponent/></WingBlank>
+
       </div>
     );
   }

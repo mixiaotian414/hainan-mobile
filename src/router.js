@@ -34,6 +34,18 @@ function RouterConfig({ history, app }) {
     path: '/ventureAnalysis',
     component: () => import('./routes/ventureAnalysis/')
   },{
+    path: '/queryIndex',
+    component: () => import('./routes/queryIndex/')
+  },{
+    path: '/trendAnalysis',
+    component: () => import('./routes/trendAnalysis/')
+  },{
+    path: '/addAttention',
+    component: () => import('./routes/addAttention/')
+  },{
+    path: '/magic',
+    component: () => import('./routes/magic/')
+  },{
     path: '/financialAnalysis',
     component: () => import('./routes/financialAnalysis/')
   }];
