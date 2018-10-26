@@ -15,15 +15,18 @@ const DepositTrend = () => {
         const option = {
             backgroundColor:'#ffffff',
             title: {
+                x:'15px',
+                y:'10px',
                 text: '存款趋势',
-                paddingTop:'10px'
+
             },
             legend: {
                 data:['存款','取款'],
-                right:'20px',
-                top:'10px'
+                right:'18px',
+                top:'32px'
             },
             grid: {
+                top:'70px',
                 left: '4%',
                 right: '4%',
                 bottom: '3%',
@@ -45,7 +48,19 @@ const DepositTrend = () => {
                 {
                     name:'存款',
                     type:'line',
-                    areaStyle: {normal:{color:'#166eb7'}},
+                    areaStyle: {normal:{color: {
+                        type: 'linear',
+                        x: 0,
+                        y: 0,
+                        x2: 0,
+                        y2: 1,
+                        colorStops: [{
+                            offset: 0, color: 'rgba(22,110,183,.8)' // 0% 处的颜色
+                        }, {
+                            offset: 1, color: 'rgba(255,255,255,.3)' // 100% 处的颜色
+                        }],
+                        globalCoord: false // 缺省为 false
+                    }}},
                     itemStyle:{
                         normal:{
                             color:'#166eb7',
@@ -58,7 +73,19 @@ const DepositTrend = () => {
                 {
                     name:'取款',
                     type:'line',
-                    areaStyle: {normal:{color:'#019a62'}},
+                    areaStyle: {normal:{color: {
+                        type: 'linear',
+                        x: 0,
+                        y: 0,
+                        x2: 0,
+                        y2: 1,
+                        colorStops: [{
+                            offset: 0, color: 'rgba(1,154,98,.8)' // 0% 处的颜色
+                        }, {
+                            offset: 1, color: 'rgba(255,255,255,.3)' // 100% 处的颜色
+                        }],
+                        globalCoord: false // 缺省为 false
+                    }}},
                     itemStyle:{
                         normal:{
                             color:'#019a62',
@@ -88,18 +115,14 @@ const DepositTrend = () => {
 
     return (
         <div className="examples">
-            <div className="parent">
+            <div className="parent"  style={{position:'relative'}}>
                 {/*  <label> Chart With event <strong> onEvents </strong>: (Click the chart, and watch the console)</label>*/}
+                <div style={{position:'absolute',top:'10px',right:'20px',zIndex:'10'}}>单位 万元</div>
                 <ReactEcharts
                     option={getOtion()}
                     style={{ height: 300 }}
                     onChartReady={onChartReady}
-                    /*  onEvents={onEvents}*/
                 />
-                {/* <label> code below: </label>
-        <pre>
-          <code>{code}</code>
-        </pre>*/}
             </div>
         </div>
     )

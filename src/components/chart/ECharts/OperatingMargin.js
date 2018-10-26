@@ -56,10 +56,7 @@ const OperatingMargin = () => {
 
             ]
         };
-        setInterval(function () {
-            option.series[0].data[0].value = (Math.random() * 100).toFixed(2) - 0;
-            myChart.setOption(option, true);
-        },2000);
+
         return option
     }
 
@@ -89,7 +86,7 @@ const OperatingMargin = () => {
                         /*  onEvents={onEvents}*/
                     />
                 </div>
-                <div style={{width:'25%',display:'inline-block',position:'absolute',top:'30%'}}>
+                <div style={{width:'25%',display:'inline-block',position:'absolute',top:'40%'}}>
                     <div>营业利润率</div>
                     <div style={{marginTop:'30px'}}>同比<span style={{color:'#fea256'}}>0.5%↑</span></div>
                     <div style={{marginTop:'30px'}}>环比0.5%↓</div>

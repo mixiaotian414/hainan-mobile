@@ -25,6 +25,7 @@ const TrendsInCorporateLending = () => {
                 top:'35px'
             },
             grid: {
+                top:'24%',
                 left: '4%',
                 right: '4%',
                 bottom: '3%',
@@ -46,7 +47,19 @@ const TrendsInCorporateLending = () => {
                 {
                     name:'对公长期贷款',
                     type:'line',
-                    areaStyle: {normal:{color:'#166eb7'}},
+                    areaStyle: {normal:{color: {
+                        type: 'linear',
+                        x: 0,
+                        y: 0,
+                        x2: 0,
+                        y2: 1,
+                        colorStops: [{
+                            offset: 0, color: 'rgba(22,110,183,.8)' // 0% 处的颜色
+                        }, {
+                            offset: 1, color: 'rgba(255,255,255,.3)' // 100% 处的颜色
+                        }],
+                        globalCoord: false // 缺省为 false
+                    }}},
                     itemStyle:{
                         normal:{
                             color:'#166eb7',
@@ -59,14 +72,26 @@ const TrendsInCorporateLending = () => {
                 {
                     name:'对公短期贷款',
                     type:'line',
-                    areaStyle: {normal:{color:'#019a62'}},
+                    areaStyle: {normal:{color: {
+                        type: 'linear',
+                        x: 0,
+                        y: 0,
+                        x2: 0,
+                        y2: 1,
+                        colorStops: [{
+                            offset: 0, color: 'rgba(1,154,98,.8)' // 0% 处的颜色
+                        }, {
+                            offset: 1, color: 'rgba(255,255,255,.3)' // 100% 处的颜色
+                        }],
+                        globalCoord: false // 缺省为 false
+                    }}},
                     itemStyle:{
                         normal:{
                             color:'#019a62',
                             borderColor:'#019a62'
                         }
                     },
-                    data:[100, 182, 191, 234, 100, 330, 310]
+                    data:[100, 182, 191, 234, 100, 200, 144]
                 }
             ]
         };

@@ -34,7 +34,19 @@ const AnalysisOfTheSavingsAndLoan = () => {
             series: [{
                 data: [10, 66, 55, 77, 22, 66, 44],
                 type: 'line',
-                areaStyle: {normal:{color:'#166eb7'}},
+                areaStyle: {normal:{color: {
+                    type: 'linear',
+                    x: 0,
+                    y: 0,
+                    x2: 0,
+                    y2: 1,
+                    colorStops: [{
+                        offset: 0, color: 'rgba(22,110,183,.8)' // 0% 处的颜色
+                    }, {
+                        offset: 1, color: 'rgba(255,255,255,.3)' // 100% 处的颜色
+                    }],
+                    globalCoord: false // 缺省为 false
+                }}},
                 itemStyle:{
                     normal:{
                         color:'#166eb7',
