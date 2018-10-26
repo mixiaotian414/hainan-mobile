@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 
-const DepositTrend = () => {
+const TrendsInCorporateLending = () => {
     const onChartReady = (echart) => {
         console.log('echart is ready', echart)
     }
@@ -15,18 +15,17 @@ const DepositTrend = () => {
         const option = {
             backgroundColor:'#ffffff',
             title: {
+                text: '对公贷款趋势',
                 x:'15px',
-                y:'10px',
-                text: '存款趋势',
-
+                y:'10px'
             },
             legend: {
-                data:['存款','取款'],
-                right:'18px',
-                top:'32px'
+                data:['对公长期贷款','对公短期贷款'],
+                right:'20px',
+                top:'35px'
             },
             grid: {
-                top:'70px',
+                top:'24%',
                 left: '4%',
                 right: '4%',
                 bottom: '3%',
@@ -46,7 +45,7 @@ const DepositTrend = () => {
             ],
             series : [
                 {
-                    name:'存款',
+                    name:'对公长期贷款',
                     type:'line',
                     areaStyle: {normal:{color: {
                         type: 'linear',
@@ -71,7 +70,7 @@ const DepositTrend = () => {
 
                 },
                 {
-                    name:'取款',
+                    name:'对公短期贷款',
                     type:'line',
                     areaStyle: {normal:{color: {
                         type: 'linear',
@@ -92,7 +91,7 @@ const DepositTrend = () => {
                             borderColor:'#019a62'
                         }
                     },
-                    data:[100, 182, 191, 234, 100, 330, 310]
+                    data:[100, 182, 191, 234, 100, 200, 144]
                 }
             ]
         };
@@ -128,4 +127,4 @@ const DepositTrend = () => {
     )
 }
 
-export default DepositTrend
+export default TrendsInCorporateLending

@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { NavBar, Icon } from 'antd-mobile';
 import { Grid } from 'antd-mobile';
 import { Route, routerRedux } from 'dva/router';
+import styles from './index.less';
 const Mock = require('mockjs')
 
 
@@ -101,7 +102,7 @@ export default class App extends React.Component {
              <Grid  columnNum={2} data={data} square={true}
                hasLine={true}
                itemStyle={{ backgroundColor:'#ffffff',borderRadius:"10px",margin:"8px 5px" }}
-               /*className="not-square-grid"*/
+               // className={styles.am-grid}
                onClick={
                  (el: Object, index: number)=>{
                    if(index===0){

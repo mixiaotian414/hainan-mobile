@@ -29,6 +29,7 @@ const Rental = () => {
                 y: 'center',
                 data: ['大额支付', '柜面','网上银行', '银联', '中间业务', '自助ATM机'],
             },
+            color: ['#019a62','#f49d1f','#69d1fa','#00aef3','#afd46f','#156db7'],
             series: [
                 {
                     name: '业务分析',

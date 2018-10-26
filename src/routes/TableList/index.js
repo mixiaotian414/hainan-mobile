@@ -8,6 +8,7 @@ import Tables from "../../components/Tables";
 import PlaceHolder from "../../components/PlaceHolder";
 import MapChartComponent from "../../components/chart/ECharts/MapChartComponent";
 import TransparentBar3DComPonent from "../../components/chart/ECharts/TransparentBar3DComPonent";
+import styles from './index.less';
 const nowTimeStamp = Date.now();
 const now = new Date(nowTimeStamp);
 @connect()
