@@ -7,8 +7,9 @@ import PopoverBar from "../../components/PopoverBar";
 import DepositTrend from "../../components/chart/ECharts/DepositTrend";
 import Rental from "../../components/chart/ECharts/Rental";
 import PlaceHolder from "../../components/PlaceHolder";
-import MapChartComponent from "../../components/chart/ECharts/MapChartComponent";
-import TransparentBar3DComPonent from "../../components/chart/ECharts/TransparentBar3DComPonent";
+import TotalAssetsS from "../../components/chart/ECharts/TotalAssetsS";
+import TotalLiabilitiesS from "../../components/chart/ECharts/TotalLiabilitiesS";
+import styles from './index.less';
 const nowTimeStamp = Date.now();
 const now = new Date(nowTimeStamp);
 @connect()
@@ -37,14 +38,15 @@ export default class CookPit extends React.Component {
         >
           <List.Item arrow="horizontal"> </List.Item>
         </DatePicker>
+        <TotalAssetsS/>
+        <TotalLiabilitiesS/>
+        <WhiteSpace size="lg" />
         <DepositTrend/>
         <WhiteSpace size="lg" />
         <Rental/>
         <WhiteSpace size="lg" />
-         <MapChartComponent/>
-        {/*  <PlaceHolder title="3D视图"/>
-        <WingBlank> <TransparentBar3DComPonent/></WingBlank>
-*/}
+
+
 
       </div>
     );

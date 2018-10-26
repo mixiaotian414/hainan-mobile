@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 
-const DepositTrend = () => {
+const TrendsInCorporateLending = () => {
     const onChartReady = (echart) => {
         console.log('echart is ready', echart)
     }
@@ -15,13 +15,14 @@ const DepositTrend = () => {
         const option = {
             backgroundColor:'#ffffff',
             title: {
-                text: '存款趋势',
-                paddingTop:'10px'
+                text: '对公贷款趋势',
+                x:'15px',
+                y:'10px'
             },
             legend: {
-                data:['存款','取款'],
+                data:['对公长期贷款','对公短期贷款'],
                 right:'20px',
-                top:'10px'
+                top:'35px'
             },
             grid: {
                 left: '4%',
@@ -43,7 +44,7 @@ const DepositTrend = () => {
             ],
             series : [
                 {
-                    name:'存款',
+                    name:'对公长期贷款',
                     type:'line',
                     areaStyle: {normal:{color:'#166eb7'}},
                     itemStyle:{
@@ -56,7 +57,7 @@ const DepositTrend = () => {
 
                 },
                 {
-                    name:'取款',
+                    name:'对公短期贷款',
                     type:'line',
                     areaStyle: {normal:{color:'#019a62'}},
                     itemStyle:{
@@ -88,21 +89,17 @@ const DepositTrend = () => {
 
     return (
         <div className="examples">
-            <div className="parent">
+            <div className="parent"  style={{position:'relative'}}>
                 {/*  <label> Chart With event <strong> onEvents </strong>: (Click the chart, and watch the console)</label>*/}
+                <div style={{position:'absolute',top:'10px',right:'20px',zIndex:'10'}}>单位 万元</div>
                 <ReactEcharts
                     option={getOtion()}
                     style={{ height: 300 }}
                     onChartReady={onChartReady}
-                    /*  onEvents={onEvents}*/
                 />
-                {/* <label> code below: </label>
-        <pre>
-          <code>{code}</code>
-        </pre>*/}
             </div>
         </div>
     )
 }
 
-export default DepositTrend
+export default TrendsInCorporateLending

@@ -9,6 +9,7 @@ import Tables from "../../components/Tables";
 import PlaceHolder from "../../components/PlaceHolder";
 import MapChartComponent from "../../components/chart/ECharts/MapChartComponent";
 import TransparentBar3DComPonent from "../../components/chart/ECharts/TransparentBar3DComPonent";
+import styles from './index.less';
 const nowTimeStamp = Date.now();
 const now = new Date(nowTimeStamp);
 @connect()
@@ -23,7 +24,7 @@ export default class SpecificAnalysis extends React.Component {
   };
   render() {
     const data = [ {icon:require('../../assets/s1.png'),text:"资产负债分析"},
-      {icon:require('../../assets/s2.png'),text:"存款分析"},
+      {icon:require('../../assets/s2.png'),text:"存贷分析"},
       {icon:require('../../assets/s3.png'),text:"风险分析"},
       {icon:require('../../assets/s4.png'),text:"财务分析"},
     ];
