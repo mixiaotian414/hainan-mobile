@@ -48,7 +48,7 @@ export default class LetterIndex extends React.Component {
     }
 
     componentDidMount() {
-        const hei = document.documentElement.clientHeight -44-45-47;
+        const hei = document.documentElement.clientHeight -44-45-47-65;
         // simulate initial Ajax
         setTimeout(() => {
             this.setState({
@@ -136,6 +136,7 @@ export default class LetterIndex extends React.Component {
                                            }else {
                                                _.pull(checkValue,rowID)
                                            }
+                                          this.props._onChange(checkValue)
                                           console.log(checkValue,rowData,sectionID, rowID)
                                       }
                          }>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { List,  NavBar, Icon ,WhiteSpace,Button} from 'antd-mobile';
+import { List,  NavBar, Icon ,WhiteSpace,Button,Toast} from 'antd-mobile';
 
 import {  routerRedux } from 'dva/router';
 import { connect } from 'react-redux';
@@ -17,9 +17,11 @@ export default class AddAttention extends React.Component {
   };
 
   render() {
-    const { app } = this.props;
+    const { app,location } = this.props;
+      const query  =location.query;
+      console.log(query,'query')
     return (
-      <div>
+      <div className={style.attention}>
         <NavBar
           mode="light"
           icon={<Icon type="left" />}
@@ -28,7 +30,16 @@ export default class AddAttention extends React.Component {
 
           <List   className="my-list" style={{height: document.documentElement.clientHeight -130,    overflowY: 'auto'}}>
               <WhiteSpace size="lg" className={style.wspColor} />
-              <Item extra={ <img
+              <Item  onClick={()=>{
+                  this.props.dispatch(
+                      routerRedux.push({
+                              pathname:'/magic',
+                              query:""
+                          }
+                      )
+                  );}
+              }
+                  extra={ <img
                   src={require('../../assets/p29.png')}
                   alt=""
                   style={{ verticalAlign: 'top' }}
@@ -90,7 +101,12 @@ export default class AddAttention extends React.Component {
 
           </List>
 
-          <Button type="ghost" className="am-button-borderfix"  style={{ margin: '15px auto',width:'80%'  }} ><img
+          <Button type="ghost" className="am-button-borderfix"
+                  style={{ margin: '15px auto',width:'80%'  }}
+                  onClick={()=>{
+                      Toast.success('添加关注成功！',2);
+                  }}
+          ><img
               src={require('../../assets/p33.png')}
               alt=""
               style={{ width:'18px',margin: '0px 5px -1px' }}

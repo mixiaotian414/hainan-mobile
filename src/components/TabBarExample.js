@@ -2,6 +2,7 @@ import React from 'react';
 import { TabBar } from 'antd-mobile';
 import { connect } from 'react-redux';
 import  App from '../components/App';
+import  QueryIndex from '../routes/queryIndex/';
 
 import home from './../assets/home.png';
 import homeChoose from './../assets/homeChoose.png';
@@ -15,7 +16,7 @@ export default class TabBarExample extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'blueTab',
+      selectedTab: 'home',//home,queryIndex
       hidden: false,
       fullScreen: true,
     };
@@ -49,20 +50,29 @@ export default class TabBarExample extends React.Component {
     );
   }
   renderMain(pageText) {
+      if(pageText==='home'){
     return (
       <div style={{ backgroundColor: '#f0f0f0', height: '100%', textAlign: 'center' }}>
         <App></App>
       </div>
-    );
+    );}else if(pageText==='queryIndex'){
+          return (
+              <div style={{ backgroundColor: '#f0f0f0', height: '100%', textAlign: 'center' }}>
+                  <QueryIndex disabled={this.state.selectedTab==="queryIndex"?true:false}></QueryIndex>
+              </div>
+          )
+      }
   }
 
   render() {
     return (
       <div style={this.state.fullScreen ? { position: 'fixed', height: '100%', width: '100%', top: 0 } : { height: 400 }}>
         <TabBar
+
           unselectedTintColor="#949494"
           tintColor="#33A3F4"
           barTintColor="white"
+
           hidden={this.state.hidden}
         >
           <TabBar.Item
@@ -86,11 +96,11 @@ export default class TabBarExample extends React.Component {
             }}
             />
             }
-            selected={this.state.selectedTab === 'blueTab'}
+            selected={this.state.selectedTab === 'home'}
             badge={1}
             onPress={() => {
               this.setState({
-                selectedTab: 'blueTab',
+                selectedTab: 'home',
               });
             }}
             data-seed="logId"
@@ -116,15 +126,15 @@ export default class TabBarExample extends React.Component {
             title="指标管理"
             key="target management"
             badge={'new'}
-            selected={this.state.selectedTab === 'redTab'}
+            selected={this.state.selectedTab === 'queryIndex'}
             onPress={() => {
               this.setState({
-                selectedTab: 'redTab',
+                selectedTab: 'queryIndex',
               });
             }}
             data-seed="logId1"
           >
-            {this.renderContent('target management')}
+              {this.renderMain('queryIndex')}
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -144,14 +154,14 @@ export default class TabBarExample extends React.Component {
             title="我的"
             key="my"
             dot
-            selected={this.state.selectedTab === 'greenTab'}
+            selected={this.state.selectedTab === 'blackTab'}
             onPress={() => {
               this.setState({
-                selectedTab: 'greenTab',
+                selectedTab: 'blackTab',
               });
             }}
           >
-            {this.renderContent('my')}
+              {this.renderMain('home')}
           </TabBar.Item>
 
         </TabBar>

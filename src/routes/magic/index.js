@@ -24,7 +24,15 @@ export default class Magic extends React.Component {
         <NavBar
           mode="light"
           icon={<Icon type="left" />}
-          onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/IndexPage"));}}
+          onLeftClick={() =>{
+              this.props.dispatch(
+                  routerRedux.push({
+                          pathname:'/addAttention',
+                          query:""
+                      }
+                  )
+              );}
+          }
         >魔术狮</NavBar>
           <WhiteSpace size="lg" />
           <div className={style.topTip}>
