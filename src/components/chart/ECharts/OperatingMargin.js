@@ -17,7 +17,6 @@ const OperatingMargin = () => {
                 formatter: "{a} <br/>{b} : {c}%"
             },
             grid:{
-                right:'50%',
                 width:'50%'
             },
             radius:'50%',
@@ -76,7 +75,7 @@ const OperatingMargin = () => {
 
     return (
         <div className="examples">
-            <div className="parent"  style={{position:'relative',height:300}}>
+            <div className="parent"  style={{position:'relative',height:300,display:'flex',alignItems:'center'}}>
                 {/*  <label> Chart With event <strong> onEvents </strong>: (Click the chart, and watch the console)</label>*/}
                 <div style={{width:'60%',display:'inline-block'}}>
                     <ReactEcharts
@@ -86,10 +85,10 @@ const OperatingMargin = () => {
                         /*  onEvents={onEvents}*/
                     />
                 </div>
-                <div style={{width:'25%',display:'inline-block',position:'absolute',top:'40%'}}>
-                    <div>营业利润率</div>
-                    <div style={{marginTop:'30px'}}>同比<span style={{color:'#fea256'}}>0.5%↑</span></div>
-                    <div style={{marginTop:'30px'}}>环比0.5%↓</div>
+                <div style={{width:'25%',height: 100,display:'flex',alignContent:'space-around',flexWrap:'wrap' }}>
+                    <div style={{flex:'1 0 auto',width:'100%'}}>营业利润率</div>
+                    <div style={{flex:'1 0 auto',width:'100%'}}>同比<span style={{color:'#fea256'}}>0.5%↑</span></div>
+                    <div style={{flex:'1 0 auto',width:'100%'}}>环比0.5%↓</div>
                 </div>
 
                 {/* <label> code below: </label>

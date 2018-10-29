@@ -61,7 +61,7 @@ export default class App extends React.Component {
 
           style={{background:"none",position: "absolute", top: 0, left: 0, zIndex: 10}}
           icon={<Icon type="left" />}
-          onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/IndexPage"));}}
+          onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/loginInterface"));}}
         /*  rightContent={[
             <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
             <Icon key="1" type="ellipsis" />,

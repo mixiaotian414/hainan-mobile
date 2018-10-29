@@ -48,6 +48,9 @@ function RouterConfig({ history, app }) {
   },{
     path: '/financialAnalysis',
     component: () => import('./routes/financialAnalysis/')
+  },{
+      path: '/loginInterface',
+      component: () => import('./routes/loginInterface/')
   }];
   return (
     <Router history={history}>
