@@ -14,6 +14,9 @@ const AnalysisOfTheSavingsAndLoan = () => {
     const getOtion = () => {
         const option = {
             backgroundColor:'#ffffff',
+            tooltip: {
+                trigger: 'axis'
+            },
             xAxis: {
                 type: 'category',
                 boundaryGap: false,

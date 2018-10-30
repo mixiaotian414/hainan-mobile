@@ -25,6 +25,9 @@ const DepositTrend = () => {
                 right:'18px',
                 top:'32px'
             },
+            tooltip: {
+                trigger: 'axis'
+            },
             grid: {
                 top:'70px',
                 left: '4%',
