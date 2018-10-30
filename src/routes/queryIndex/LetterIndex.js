@@ -112,7 +112,7 @@ export default class LetterIndex extends React.Component {
                                 className="sticky"
                                 style={{
                                     ...style,
-                                    top:"89px",
+                                    top:"100px",
                                     zIndex: 3,
                                   /*  backgroundColor: sectionData.charCodeAt(0) % 2 ? '#5890ff' : '#F8591A',  */
                                     backgroundColor: '#efeff4',
