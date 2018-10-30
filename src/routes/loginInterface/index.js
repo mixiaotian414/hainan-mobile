@@ -17,7 +17,7 @@ export default class loginInterface extends React.Component {
     render() {
         const { app } = this.props;
         return (
-            <div style={{backgroundColor:'#fff',height:'100vh'}}>
+            <div style={{backgroundColor:'#fff',height:'100vh'}} className='login'>
                 <NavBar
                     mode="light"
                     icon={<Icon type="left" />}

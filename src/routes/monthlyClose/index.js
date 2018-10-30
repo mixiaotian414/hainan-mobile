@@ -9,7 +9,6 @@ import Tables from "../../components/Tables";
 import PlaceHolder from "../../components/PlaceHolder";
 import TotalAssets from "../../components/chart/ECharts/TotalAssets";
 import TotalLiabilities from "../../components/chart/ECharts/TotalLiabilities";
-import styles from './index.less';
 const nowTimeStamp = Date.now();
 const now = new Date(nowTimeStamp);
 @connect()

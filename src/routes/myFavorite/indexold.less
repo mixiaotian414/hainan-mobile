@@ -1,89 +1,80 @@
  :global {
-   .am-list-item{
-     background: none;
-   }
-   .am-navbar{
-     height: 60px;
-   }
-   .am-grid {
-     .am-flexbox{
-       background: none;
-       border: 0px solid #dcdcdc;
+   .myFavorite{
+     .topper{
+       border-bottom: 1px solid #dcdcdc;
+       .title{
+         height: 30px;
+         line-height: 30px;
+         display: flex;
+         justify-content: space-between;
+         .name{
+           display: inline-block;
+         }
+         .index{
+           display: inline-block;
+           color: #999999;
+           span{
+             color: #333333;
+             margin-left: 5px;
+           }
+         }
+       }
+       .content{
+         margin: 38px 0;
+         display: flex;
+         align-items: center;
+         span{
+           background: url("../../assets/demo.png") no-repeat;
+           width: 52px;
+           height: 52px;
+           display: inline-block;
+           margin-right: 10px;
+         }
+       }
+     }
+     .bottom{
+       display: flex;
+       justify-content: space-between;
+       align-items:center;
+       height: 88px;
+       box-sizing: border-box;
+       .module{
+         display: flex;
+         height: 48px;
+         padding: 10px 15px;
+         border-right: 1px solid #dcdcdc;
+         flex: 1 1 auto;
+         align-items: center;
+         justify-content: center;
+         &:last-child{
+           border-right: none;
+         }
+       }
+       .trendAnalysis{
+         background: url(../../assets/TrendAnalysis.png) center center /  20px 20px no-repeat;
+         width: 24px;
+         height: 24px;
+         display: inline-block;
+       }
+       .indexInterpretation{
+         background: url(../../assets/IndexInterpretation.png) center center /  20px 20px no-repeat;
+         width: 24px;
+         height: 24px;
+         display: inline-block;
+       }
+       .collect{
+         background: url(../../assets/Collection.png) center center /  20px 20px no-repeat;
+         width: 24px;
+         height: 24px;
+         display: inline-block;
+       }
+       .cancelCollection{
+         background: url(../../assets/CancelCollection.png) center center /  20px 20px no-repeat;
+         width: 24px;
+         height: 24px;
+         display: inline-block;
+       }
      }
    }
-}
-.topper{
-  border-bottom: 1px solid #dcdcdc;
-  .title{
-    height: 30px;
-    line-height: 30px;
-    display: flex;
-    justify-content: space-between;
-    .name{
-      display: inline-block;
-    }
-    .index{
-      display: inline-block;
-      color: #999999;
-      span{
-        color: #333333;
-        margin-left: 5px;
-      }
-    }
-  }
-  .content{
-    margin: 38px 0;
-    display: flex;
-    align-items: center;
-    span{
-      background: url("../../assets/demo.png") no-repeat;
-      width: 52px;
-      height: 52px;
-      display: inline-block;
-      margin-right: 10px;
-    }
-  }
-}
-.bottom{
-  display: flex;
-  justify-content: space-between;
-  align-items:center;
-  height: 88px;
-  box-sizing: border-box;
-  .module{
-    display: flex;
-    height: 48px;
-    padding: 10px 15px;
-    border-right: 1px solid #dcdcdc;
-    flex: 1 1 auto;
-    align-items: center;
-    justify-content: center;
-    &:last-child{
-      border-right: none;
-    }
-  }
-  .trendAnalysis{
-    background: url(../../assets/TrendAnalysis.png) center center /  20px 20px no-repeat;
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-  }
-  .indexInterpretation{
-    background: url(../../assets/IndexInterpretation.png) center center /  20px 20px no-repeat;
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-  }
-  .collect{
-    background: url(../../assets/Collection.png) center center /  20px 20px no-repeat;
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-  }
-  .cancelCollection{
-    background: url(../../assets/CancelCollection.png) center center /  20px 20px no-repeat;
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-  }
-}
+ }
+

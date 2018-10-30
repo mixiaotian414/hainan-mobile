@@ -10,7 +10,6 @@ import Tables from "../../components/Tables";
 import PlaceHolder from "../../components/PlaceHolder";
 import AnalysisOfAssetsAndLiabilities from "../../components/chart/ECharts/AnalysisOfAssetsAndLiabilities";
 import TrendsInCorporateLending from "../../components/chart/ECharts/TrendsInCorporateLending";
-import styles from './index.less';
 const nowTimeStamp = Date.now();
 const now = new Date(nowTimeStamp);
 const tabs = [

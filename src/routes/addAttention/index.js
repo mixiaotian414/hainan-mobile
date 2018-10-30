@@ -21,7 +21,7 @@ export default class AddAttention extends React.Component {
       const query  =location.query;
       console.log(query,'query')
     return (
-      <div className={style.attention}>
+      <div className='attention'>
         <NavBar
           mode="light"
           icon={<Icon type="left" />}

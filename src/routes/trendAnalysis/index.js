@@ -18,7 +18,7 @@ export default class TrendAnalysis extends React.Component {
   render() {
     const { app } = this.props;
     return (
-      <div>
+      <div className='trendAnalysis'>
         <NavBar
           mode="light"
           icon={<Icon type="left" />}

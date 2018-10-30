@@ -19,7 +19,7 @@ export default class Attention extends React.Component {
     render() {
         const { app } = this.props;
         return (
-            <div>
+            <div className='myFavorite'>
                 <NavBar
                     mode="light"
                     icon={<Icon type="left" />}

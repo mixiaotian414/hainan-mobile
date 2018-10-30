@@ -48,7 +48,7 @@ export default class LetterIndex extends React.Component {
     }
 
     componentDidMount() {
-        const hei = document.documentElement.clientHeight -44-45-47-65;
+        const hei = document.documentElement.clientHeight;
         // simulate initial Ajax
         setTimeout(() => {
             this.setState({
@@ -77,8 +77,8 @@ export default class LetterIndex extends React.Component {
 
     render() {
         let checkValue=this.state.checkValue
-        return (<div style={{ paddingTop: '44px', position: 'relative' }}>
-            <div style={{ position: 'absolute', top: 0, left: 0, right: 0 }}>
+        return (<div style={{  position: 'relative',top:'60px' }}>
+            <div style={{width:'100%',position:'fixed',top:'60px',right:'0',zIndex:'5'}}>
                 <SearchBar
                     value={this.state.inputValue}
                     placeholder="Search"
@@ -94,6 +94,7 @@ export default class LetterIndex extends React.Component {
                 /*useBodyScroll*/
                 style={{
                     height: this.state.height,
+                    marginTop:'44px',
                     overflow: 'auto',
                 }}
                 renderSectionWrapper={sectionID => (

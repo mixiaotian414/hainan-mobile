@@ -48,6 +48,7 @@ const DepositTrend = () => {
                 {
                     name:'存款',
                     type:'line',
+                    hoverAnimation:true,
                     areaStyle: {normal:{color: {
                         type: 'linear',
                         x: 0,

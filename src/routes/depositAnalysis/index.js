@@ -10,7 +10,6 @@ import PlaceHolder from "../../components/PlaceHolder";
 import AnalysisOfTheSavingsAndLoan from "../../components/chart/ECharts/AnalysisOfTheSavingsAndLoan";
 import Deposits from "../../components/chart/ECharts/Deposits";
 import LoansMade from "../../components/chart/ECharts/LoansMade";
-import styles from './index.less';
 const nowTimeStamp = Date.now();
 const now = new Date(nowTimeStamp);
 @connect()
