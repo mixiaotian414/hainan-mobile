@@ -2,6 +2,7 @@ import React from 'react';
 import { province } from 'antd-mobile-demo-data';
 import { StickyContainer, Sticky } from 'react-sticky';
 import { ListView, List, SearchBar,Radio,Checkbox} from 'antd-mobile';
+import request  from '../../utils/request'
 import _ from 'lodash'
 const CheckboxItem = Checkbox.CheckboxItem;
 import style from './LetterIndex.less'
@@ -50,6 +51,9 @@ export default class LetterIndex extends React.Component {
     componentDidMount() {
         const hei = document.documentElement.clientHeight;
         // simulate initial Ajax
+
+        this.firstfetch()
+
         setTimeout(() => {
             this.setState({
                 dataSource: genData(this.state.dataSource, province),
@@ -57,6 +61,30 @@ export default class LetterIndex extends React.Component {
                 height: hei,
             });
         }, 600);
+    }
+
+    firstfetch = ( ) => {
+        this.promise = request({
+            url:"/gateway/indexDemo.json",
+            method: 'post',
+            data: {
+                orgId:'',
+                appId:''
+            },
+        }).then((result) => {
+            if (result.RSP_HEAD.TRAN_SUCCESS!=='1') {
+                return
+            }
+            /*const queryData = result.RSP_BODY.LIST*/
+
+            console.log(result,"result")
+
+            this.setState({
+      /*          dataSource: genData(this.state.dataSource, province),
+                isLoading: false,*/
+            });
+
+        })
     }
 
     onSearch = (val) => {
