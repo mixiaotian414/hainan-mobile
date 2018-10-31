@@ -105,16 +105,7 @@ export default class LetterIndex extends React.Component {
 
     render() {
         let checkValue=this.state.checkValue
-        return (<div style={{  position: 'relative',top:'60px' }}>
-            <div style={{width:'100%',position:'fixed',top:'60px',right:'0',zIndex:'5'}}>
-                <SearchBar
-                    value={this.state.inputValue}
-                    placeholder="Search"
-                    onChange={this.onSearch}
-                    onClear={() => { console.log('onClear'); }}
-                    onCancel={() => { console.log('onCancel'); }}
-                />
-            </div>
+        return (<div style={{  marginTop:'104px',width:'100%' }}>
             <ListView.IndexedList
                 ref={el => this.lv = el}
                 dataSource={this.state.dataSource}
@@ -124,6 +115,7 @@ export default class LetterIndex extends React.Component {
                     height: this.state.height,
                     marginTop:'44px',
                     overflow: 'auto',
+                    width:'100%'
                 }}
                 renderSectionWrapper={sectionID => (
                     <StickyContainer
@@ -133,7 +125,7 @@ export default class LetterIndex extends React.Component {
                     />
                 )}
                 renderSectionHeader={sectionData => (
-                    <Sticky >
+                    <Sticky>
                         {({
                               style,
                           }) => (

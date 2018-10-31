@@ -56,23 +56,25 @@ class hurdle extends React.Component {
         const { getFieldProps } = form;
         return (
             <WingBlank>
-                <List>
-                <InputItem
-                    {...getFieldProps('Identification')}
-                    placeholder="请输入账号"
-                    clear
-                >
-                    <div style={{ backgroundImage: 'url('+id+')', backgroundSize: 'cover', height: '28px', width: '22px' }} />
-                </InputItem>
-                <InputItem
-                    {...getFieldProps('Password')}
-                    type="password"
-                    placeholder="请输入密码"
-                    clear
-                >
-                    <div style={{ backgroundImage: 'url('+pd+')', backgroundSize: 'cover', height: '28px', width: '22px' }} />
-                </InputItem>
-            </List>
+                <div className='loginface'>
+                    <List>
+                        <InputItem
+                            {...getFieldProps('Identification')}
+                            placeholder="请输入账号"
+                            clear
+                        >
+                            <div style={{ backgroundImage: 'url('+id+')', backgroundSize: 'cover', height: '28px', width: '22px' }} />
+                        </InputItem>
+                        <InputItem
+                            {...getFieldProps('Password')}
+                            type="password"
+                            placeholder="请输入密码"
+                            clear
+                        >
+                            <div style={{ backgroundImage: 'url('+pd+')', backgroundSize: 'cover', height: '28px', width: '22px' }} />
+                        </InputItem>
+                    </List>
+                </div>
             </WingBlank>
         );
     }

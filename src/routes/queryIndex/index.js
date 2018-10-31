@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavBar, Icon,Button ,Flex } from 'antd-mobile';
+import { NavBar, Icon,Button ,SearchBar} from 'antd-mobile';
 
 import {  routerRedux } from 'dva/router';
 import { connect } from 'react-redux';
@@ -37,6 +37,15 @@ export default class QueryIndex extends React.Component {
        /*   icon={<Icon type="left" />}
           onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/IndexPage"));}}*/
         >指标查询</NavBar>
+          <div style={{width:'100%',position:'fixed',top:'60px',right:'0',zIndex:'5'}}>
+              <SearchBar
+                  value={this.state.inputValue}
+                  placeholder="Search"
+                  onChange={this.onSearch}
+                  onClear={() => { console.log('onClear'); }}
+                  onCancel={() => { console.log('onCancel'); }}
+              />
+          </div>
          <LetterIndex {...lprops} />
           <div style={{display:"flex",width:'100%',position:'fixed',bottom:'49px',right:'0',zIndex:'5'}}>
           <Button  style={{width:'50%'}} onClick={()=>{location.reload()}}>重置</Button>

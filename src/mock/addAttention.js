@@ -87,8 +87,8 @@ module.exports = {
 
 
   [`POST /gateway/indexList.json`] (req, res) {
-    const query = req.body.indexArray
-console.log(query,'query')
+    const query = req.body.indexArray;
+    console.log(query,'query');
       res.status(200).json({
           RSP_HEAD:{TRAN_SUCCESS:'1'},
           RSP_BODY:{
@@ -99,6 +99,10 @@ console.log(query,'query')
                 {index:4,value:654.32,text:'负债总额'},
                 {index:5,value:13587.83,text:'表内存款'},
                 {index:6,value:788.33,text:'表内存款'},
+                {index:7,value:788.33,text:'表内存款'},
+                {index:8,value:788.33,text:'表内存款'},
+                {index:9,value:788.33,text:'表内存款'},
+                {index:10,value:988.33,text:'表内存款'},
                 ],
               RESCODE:"1",
               RESMESSAGE:"获取数据错误",},
