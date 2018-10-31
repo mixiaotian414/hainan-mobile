@@ -13,6 +13,9 @@ const OperatingMarginLine = () => {
     }
     const getOtion = () => {
         const option = {
+            tooltip: {
+                trigger: 'axis'
+            },
             xAxis: {
                 type: 'category',
                 boundaryGap: false,

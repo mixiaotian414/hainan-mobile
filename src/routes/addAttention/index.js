@@ -52,7 +52,7 @@ export default class AddAttention extends React.Component {
       const list =this.state.list
 
     return (
-      <div className={style.attention}>
+      <div className='attention'>
         <NavBar
           mode="light"
           icon={<Icon type="left" />}

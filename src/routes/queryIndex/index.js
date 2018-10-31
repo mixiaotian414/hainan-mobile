@@ -30,14 +30,15 @@ export default class QueryIndex extends React.Component {
     const { app,disabled } = this.props;
     const { checkValue} = this.state;
     return (
-      <div style={{display:disabled?"":"none"}}>
+      <div style={{display:disabled?"":"none",position:'relative',height:document.documentElement.clientHeight -60+8}} className='queryIndex'>
         <NavBar
           mode="light"
+          style={{position:'fixed',top:'0',left:'0',zIndex:'5',width:'100%'}}
        /*   icon={<Icon type="left" />}
           onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/IndexPage"));}}*/
         >指标查询</NavBar>
-         <LetterIndex {...lprops}/>
-          <div style={{display:"flex"}}>
+         <LetterIndex {...lprops} />
+          <div style={{display:"flex",width:'100%',position:'fixed',bottom:'49px',right:'0',zIndex:'5'}}>
           <Button  style={{width:'50%'}} onClick={()=>{location.reload()}}>重置</Button>
           <Button type="primary" style={{width:'50%' }}
                   onClick={

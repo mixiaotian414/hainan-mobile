@@ -18,6 +18,9 @@ const TotalAssets = () => {
                 x:'15px',
                 y:'10px'
             },
+            tooltip: {
+                trigger: 'axis'
+            },
             xAxis: {
                 type: 'category',
                 boundaryGap: false,

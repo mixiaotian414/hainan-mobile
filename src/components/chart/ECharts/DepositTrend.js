@@ -25,6 +25,9 @@ const DepositTrend = () => {
                 right:'18px',
                 top:'32px'
             },
+            tooltip: {
+                trigger: 'axis'
+            },
             grid: {
                 top:'70px',
                 left: '4%',
@@ -48,6 +51,7 @@ const DepositTrend = () => {
                 {
                     name:'存款',
                     type:'line',
+                    hoverAnimation:true,
                     areaStyle: {normal:{color: {
                         type: 'linear',
                         x: 0,

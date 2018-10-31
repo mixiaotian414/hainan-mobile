@@ -23,7 +23,7 @@ export default class MyFavorite extends React.Component {
     render() {
         const { app } = this.props;
         return (
-            <div>
+            <div className='myFavorite'>
                 <NavBar
                     mode="light"
                     icon={<Icon type="left" />}

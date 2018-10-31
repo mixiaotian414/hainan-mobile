@@ -9,7 +9,6 @@ import Rental from "../../components/chart/ECharts/Rental";
 import PlaceHolder from "../../components/PlaceHolder";
 import TotalAssetsS from "../../components/chart/ECharts/TotalAssetsS";
 import TotalLiabilitiesS from "../../components/chart/ECharts/TotalLiabilitiesS";
-import styles from './index.less';
 const nowTimeStamp = Date.now();
 const now = new Date(nowTimeStamp);
 @connect()

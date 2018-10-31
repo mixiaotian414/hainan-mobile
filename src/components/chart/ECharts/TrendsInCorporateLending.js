@@ -24,6 +24,9 @@ const TrendsInCorporateLending = () => {
                 right:'20px',
                 top:'35px'
             },
+            tooltip: {
+                trigger: 'axis'
+            },
             grid: {
                 top:'24%',
                 left: '4%',

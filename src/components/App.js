@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { NavBar, Icon } from 'antd-mobile';
 import { Grid } from 'antd-mobile';
 import { Route, routerRedux } from 'dva/router';
-import styles from './index.less';
+import styles from '../themes/index.less';
 const Mock = require('mockjs')
 
 
