@@ -117,7 +117,7 @@ export default class LetterIndex extends React.Component {
                     onClear={() => { console.log('onClear'); }}
                     /*   onCancel={() => { this.onSearch("") }}*/
                     onCancel={() => {
-                        console.log(this.checkboxRef,'checkbox')
+
                     }}
                 />
             </div>
@@ -165,7 +165,6 @@ export default class LetterIndex extends React.Component {
                     <div>
                         {/*<Item>{rowData}</Item>*/}
                         <CheckboxItem key={rowID}
-                                     /* ref={(e) => {this.checkboxRef[rowID] = e}}*/
                                       onChange={(e) => {
                                           if (e.target.checked){
                                               checkValue.push(rowID)

@@ -59,7 +59,7 @@ export default class AddAttention extends React.Component {
           onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/IndexPage"));}}
         >添加关注</NavBar>
 
-          <List   className="my-list" style={{height: document.documentElement.clientHeight -130,    overflowY: 'auto'}}>
+          <List   className="my-list" style={{height: document.documentElement.clientHeight -130,   overflowY: 'auto'}}>
               {list.map((data,index)=>(
                   <div>
                   <WhiteSpace size="lg" className={style.wspColor} />
