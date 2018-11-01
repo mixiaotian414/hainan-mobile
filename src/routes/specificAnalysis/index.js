@@ -31,39 +31,42 @@ export default class SpecificAnalysis extends React.Component {
     const { app } = this.props;
 
     return (
-      <div>
+      <div style={{overflowY:'hidden'}}>
         <NavBar
           mode="light"
           icon={<Icon type="left" />}
+          style={{position:'fixed',zIndex:'5',width:'100%',top:'0',right:'0'}}
           onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/IndexPage"));}}
         >专题分析</NavBar>
-
-        <WhiteSpace size="lg" />
+        <div style={{marginTop:'60px'}}>
+          <WhiteSpace size="lg" />
           <WingBlank>
-             <Grid  columnNum={2} data={data} square={true}
-               hasLine={true}
-               itemStyle={{ backgroundColor:'#ffffff',borderRadius:"10px",margin:"8px 5px" }}
-          /*className="not-square-grid"*/
-               onClick={
-                 (el: Object, index: number)=>{
-                   if(index===0){
-                     this.onNavigate('/assetloadAnalysis')
-                   }
-                   else if(index===1){
-                     this.onNavigate('/depositAnalysis')
-                   }
-                   else if(index===2){
-                     this.onNavigate('/ventureAnalysis')
-                   }
-                   else if(index===3){
-                     this.onNavigate('/financialAnalysis')
-                   }
+            <Grid  columnNum={2} data={data} square={true}
+                   hasLine={true}
+                   itemStyle={{ backgroundColor:'#ffffff',borderRadius:"10px",margin:"8px 5px" }}
+                /*className="not-square-grid"*/
+                   onClick={
+                       (el: Object, index: number)=>{
+                           if(index===0){
+                               this.onNavigate('/assetloadAnalysis')
+                           }
+                           else if(index===1){
+                               this.onNavigate('/depositAnalysis')
+                           }
+                           else if(index===2){
+                               this.onNavigate('/ventureAnalysis')
+                           }
+                           else if(index===3){
+                               this.onNavigate('/financialAnalysis')
+                           }
 
-                   /* this.onNavigate('/ChartWithEventComponent')*/
-                 }
-               }
-        />
+                           /* this.onNavigate('/ChartWithEventComponent')*/
+                       }
+                   }
+            />
           </WingBlank>
+        </div>
+
 
 
       </div>

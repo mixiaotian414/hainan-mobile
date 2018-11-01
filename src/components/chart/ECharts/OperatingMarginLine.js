@@ -25,7 +25,7 @@ const OperatingMarginLine = () => {
                 type: 'value'
             },
             grid: {
-                left: '1%',
+                left: '5%',
                 right: '5%',
                 bottom: '8%',
                 containLabel: true

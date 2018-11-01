@@ -28,21 +28,24 @@ export default class MonthlyClose extends React.Component {
     ];
     return (
       <div>
-        <NavBar
-          mode="light"
-          icon={<Icon type="left" />}
-          onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/IndexPage"));}}
-        >每月关注</NavBar>
-        <DatePicker
-          mode="date"
-          title="Select Date"
-          extra="Optional"
-          value={this.state.date}
-          itemStyle={{backgroundColor:'#f0f0f0'}}
-          onChange={date => this.setState({ date })}
-        >
-          <List.Item arrow="horizontal"> </List.Item>
-        </DatePicker>
+          <div  style={{position:'fixed',zIndex:'5',width:'100%',top:'0',right:'0'}}>
+              <NavBar
+                  mode="light"
+                  icon={<Icon type="left" />}
+                  onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/IndexPage"));}}
+              >每月关注</NavBar>
+              <DatePicker
+                  mode="date"
+                  title="Select Date"
+                  extra="Optional"
+                  value={this.state.date}
+                  itemStyle={{backgroundColor:'#f0f0f0'}}
+                  onChange={date => this.setState({ date })}
+              >
+                  <List.Item arrow="horizontal"> </List.Item>
+              </DatePicker>
+          </div>
+          <div style={{marginTop:'104px'}}>
               <div>
                   <Tabs tabs={tabs}
                         initialPage={0}
@@ -68,6 +71,7 @@ export default class MonthlyClose extends React.Component {
                       </div>
                   </Tabs>
               </div>
+          </div>
       </div>
     );
   }

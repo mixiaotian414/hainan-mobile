@@ -52,38 +52,39 @@ export default class AddAttention extends React.Component {
       const list =this.state.list
 
     return (
-      <div style={{position:'relative',height:document.documentElement.clientHeight -60+8}} className='attention'>
+      <div  className='attention'>
         <NavBar
           mode="light"
           icon={<Icon type="left" />}
           style={{position:'fixed',top:'0',left:'0',zIndex:'5',width:'100%',height:'60px'}}
           onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/IndexPage"));}}
         >添加关注</NavBar>
-          <div style={{marginTop:'60px',zIndex:'5',height: document.documentElement.clientHeight-60-77,overflowY:'auto'}}>
+          <div style={{marginTop:'60px',zIndex:'5',height: 'auto',overflowY:'auto'}}>
               <List   className="my-list" style={{width:'100%'}}>
                   {list.map((data,index)=>(
-                      <div>
-                          <WhiteSpace size="lg" className={style.wspColor} />
-                          <Item  onClick={()=>{
-                              this.props.dispatch(
-                                  routerRedux.push({
-                                          pathname:'/magic',
-                                          query:data
-                                      }
-                                  )
-                              );}
-                          }
-                                 extra={ <img
-                                     src={require('../../assets/p29.png')}
-                                     alt=""
-                                     style={{ verticalAlign: 'top' }}
-                                 />}>{data.text} <Brief>{data.value}</Brief></Item>
-                      </div>
-                  ))}
+                  <div>
+                      <WhiteSpace size="lg" className={style.wspColor} />
+                      <Item  onClick={()=>{
+                          this.props.dispatch(
+                              routerRedux.push({
+                                      pathname:'/magic',
+                                      query:data
+                                  }
+                              )
+                          );}
+                      }
+                             extra={ <img
+                                 src={require('../../assets/p29.png')}
+                                 alt=""
+                                 style={{ verticalAlign: 'top' }}
+                             />}>{data.text} <Brief>{data.value}</Brief></Item>
+                  </div>
+              ))}
+              <div style={{height:'77px',backgroundColor: 'rgb(240, 240, 240)'}}/>
               </List>
           </div>
 
-          <div style={{position:'fixed',width:'100%',bottom:'0',right:'0',zIndex:'5',backgroundColor: 'rgb(240, 240, 240)'}}>
+          <div style={{position:'fixed',width:'100%',height:'77px',bottom:'0',right:'0',zIndex:'5',backgroundColor: 'rgb(240, 240, 240)'}}>
               <Button type="ghost" className="am-button-borderfix"
                       style={{ margin: '15px auto',width:'80%'  }}
                       onClick={()=>{

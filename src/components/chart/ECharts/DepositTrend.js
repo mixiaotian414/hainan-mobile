@@ -121,7 +121,7 @@ const DepositTrend = () => {
         <div className="examples">
             <div className="parent"  style={{position:'relative'}}>
                 {/*  <label> Chart With event <strong> onEvents </strong>: (Click the chart, and watch the console)</label>*/}
-                <div style={{position:'absolute',top:'10px',right:'20px',zIndex:'10'}}>单位 万元</div>
+                <div style={{position:'absolute',top:'10px',right:'20px',zIndex:'2'}}>单位 万元</div>
                 <ReactEcharts
                     option={getOtion()}
                     style={{ height: 300 }}

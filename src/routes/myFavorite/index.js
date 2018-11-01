@@ -49,11 +49,11 @@ export default class Attention extends React.Component {
     render() {
         const list =this.state.list
         return (
-            <div className='myFavorite' style={{width:'100%',position:'relative'}}>
+            <div className='myFavorite'>
                 <NavBar
                     mode="light"
                     icon={<Icon type="left" />}
-                    style={{position:'fixed',top:'0',left:'0',zIndex:'5',width:'100%',height:'60px'}}
+                    style={{position:'fixed',top:'0',left:'0',zIndex:'5',width:'100%'}}
                     onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/IndexPage"));}}
                 >我的收藏</NavBar>
 
