@@ -27,37 +27,41 @@ export default class AssetloadAnalysis extends React.Component {
     const { app } = this.props;
     return (
       <div>
-        <NavBar
-          mode="light"
-          icon={<Icon type="left" />}
-          onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/specificAnalysis"));}}
-        >资产负债分析</NavBar>
-          <DatePicker
-              mode="date"
-              title="Select Date"
-              extra="Optional"
-              value={this.state.date}
-              itemStyle={{backgroundColor:'#f0f0f0'}}
-              onChange={date => this.setState({ date })}
-          >
-              <List.Item arrow="horizontal"> </List.Item>
-          </DatePicker>
-        <AnalysisOfAssetsAndLiabilities />
-        <WhiteSpace size="lg" />
-
-          <div>
-              <Tabs tabs={tabs}
-                    initialPage={0}
-                    onChange={(tab, index) => { console.log('onChange', index, tab); }}
-                    onTabClick={(tab, index) => { console.log('onTabClick', index, tab); }}
+          <div  style={{position:'fixed',zIndex:'5',width:'100%',top:'0',right:'0'}}>
+              <NavBar
+                  mode="light"
+                  icon={<Icon type="left" />}
+                  style={{position:'relative',zIndex:'10'}}
+                  onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/specificAnalysis"));}}
+              >资产负债分析</NavBar>
+              <DatePicker
+                  mode="date"
+                  title="Select Date"
+                  extra="Optional"
+                  value={this.state.date}
+                  itemStyle={{backgroundColor:'#f0f0f0'}}
+                  onChange={date => this.setState({ date })}
               >
-                  <div style={{  backgroundColor: '#fff' }}>
-                      <TrendsInCorporateLending />
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }}>
-                      Content of second tab
-                  </div>
-              </Tabs>
+                  <List.Item arrow="horizontal"> </List.Item>
+              </DatePicker>
+          </div>
+          <div style={{marginTop:'104px'}}>
+              <AnalysisOfAssetsAndLiabilities />
+              <WhiteSpace size="lg" />
+              <div>
+                  <Tabs tabs={tabs}
+                        initialPage={0}
+                        onChange={(tab, index) => { console.log('onChange', index, tab); }}
+                        onTabClick={(tab, index) => { console.log('onTabClick', index, tab); }}
+                  >
+                      <div style={{  backgroundColor: '#fff' }}>
+                          <TrendsInCorporateLending />
+                      </div>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }}>
+                          Content of second tab
+                      </div>
+                  </Tabs>
+              </div>
           </div>
       </div>
     );

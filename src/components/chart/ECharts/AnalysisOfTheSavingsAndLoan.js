@@ -17,6 +17,9 @@ const AnalysisOfTheSavingsAndLoan = () => {
             tooltip: {
                 trigger: 'axis'
             },
+            grid:{
+                left:'15%',
+            },
             xAxis: {
                 type: 'category',
                 boundaryGap: false,

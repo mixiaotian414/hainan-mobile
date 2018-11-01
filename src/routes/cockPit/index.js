@@ -22,28 +22,34 @@ export default class CookPit extends React.Component {
     const { app } = this.props;
     return (
       <div>
-        <NavBar
-          mode="light"
-          icon={<Icon type="left" />}
-          onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/IndexPage"));}}
-        >驾驶舱</NavBar>
-        <DatePicker
-          mode="date"
-          title="Select Date"
-          extra="Optional"
-          value={this.state.date}
-          itemStyle={{backgroundColor:'#f0f0f0'}}
-          onChange={date => this.setState({ date })}
-        >
-          <List.Item arrow="horizontal"> </List.Item>
-        </DatePicker>
-        <TotalAssetsS/>
-        <TotalLiabilitiesS/>
-        <WhiteSpace size="lg" />
-        <DepositTrend/>
-        <WhiteSpace size="lg" />
-        <Rental/>
-        <WhiteSpace size="lg" />
+          <div  style={{position:'fixed',zIndex:'5',width:'100%',top:'0',right:'0'}}>
+              <NavBar
+                  mode="light"
+                  icon={<Icon type="left" />}
+                  style={{position:'relative',zIndex:'10'}}
+                  onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/IndexPage"));}}
+              >驾驶舱</NavBar>
+              <DatePicker
+                  mode="date"
+                  title="Select Date"
+                  extra="Optional"
+                  value={this.state.date}
+                  itemStyle={{backgroundColor:'#f0f0f0'}}
+                  onChange={date => this.setState({ date })}
+              >
+                  <List.Item arrow="horizontal"> </List.Item>
+              </DatePicker>
+          </div>
+          <div style={{marginTop:'104px'}}>
+              <TotalAssetsS/>
+              <TotalLiabilitiesS/>
+              <WhiteSpace size="lg" />
+              <DepositTrend/>
+              <WhiteSpace size="lg" />
+              <Rental/>
+              <WhiteSpace size="lg" />
+          </div>
+
 
 
 

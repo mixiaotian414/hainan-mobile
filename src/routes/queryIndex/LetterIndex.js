@@ -80,8 +80,8 @@ export default class LetterIndex extends React.Component {
             console.log(result,"result")
 
             this.setState({
-                /*          dataSource: genData(this.state.dataSource, province),
-                          isLoading: false,*/
+      /*          dataSource: genData(this.state.dataSource, province),
+                isLoading: false,*/
             });
 
         })
@@ -103,8 +103,6 @@ export default class LetterIndex extends React.Component {
             dataSource: genData(this.state.dataSource, pd),
         });
     }
-
-
 
     render() {
         let checkValue=this.state.checkValue
@@ -130,6 +128,7 @@ export default class LetterIndex extends React.Component {
                     height: this.state.height,
                     marginTop:'44px',
                     overflow: 'auto',
+                    width:'100%'
                 }}
                 renderSectionWrapper={sectionID => (
                     <StickyContainer
@@ -139,7 +138,7 @@ export default class LetterIndex extends React.Component {
                     />
                 )}
                 renderSectionHeader={sectionData => (
-                    <Sticky >
+                    <Sticky>
                         {({
                               style,
                           }) => (
@@ -149,7 +148,7 @@ export default class LetterIndex extends React.Component {
                                     ...style,
                                     top:"100px",
                                     zIndex: 3,
-                                    /*  backgroundColor: sectionData.charCodeAt(0) % 2 ? '#5890ff' : '#F8591A',  */
+                                  /*  backgroundColor: sectionData.charCodeAt(0) % 2 ? '#5890ff' : '#F8591A',  */
                                     backgroundColor: '#efeff4',
                                     color: 'black',
                                 }}
@@ -158,24 +157,23 @@ export default class LetterIndex extends React.Component {
                     </Sticky>
                 )}
 
-                /*       renderFooter={() =>
-                           <div></div>
-                       }*/
+         /*       renderFooter={() =>
+                    <div></div>
+                }*/
                 renderRow={(rowData,sectionID, rowID) => (
                     <div>
-                        {/*<Item>{rowData}</Item>*/}
+                          {/*<Item>{rowData}</Item>*/}
                         <CheckboxItem key={rowID}
-                                     /* ref={(e) => {this.checkboxRef[rowID] = e}}*/
                                       onChange={(e) => {
-                                          if (e.target.checked){
-                                              checkValue.push(rowID)
-                                          }else {
-                                              _.pull(checkValue,rowID)
-                                          }
+                                           if (e.target.checked){
+                                               checkValue.push(rowID)
+                                           }else {
+                                               _.pull(checkValue,rowID)
+                                           }
                                           this.props._onChange(checkValue)
                                           console.log(checkValue,rowData,sectionID, rowID)
                                       }
-                                      }>
+                         }>
                             {rowData}
                         </CheckboxItem>
                     </div>

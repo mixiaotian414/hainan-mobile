@@ -25,11 +25,12 @@ export default class DepositAnalysis extends React.Component {
     const { app } = this.props;
     return (
       <div>
-        <NavBar
-          mode="light"
-          icon={<Icon type="left" />}
-          onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/specificAnalysis"));}}
-        >存贷分析</NavBar>
+        <div  style={{position:'fixed',zIndex:'5',width:'100%',top:'0',right:'0'}}>
+          <NavBar
+              mode="light"
+              icon={<Icon type="left" />}
+              onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/specificAnalysis"));}}
+          >存贷分析</NavBar>
           <DatePicker
               mode="date"
               title="Select Date"
@@ -38,17 +39,15 @@ export default class DepositAnalysis extends React.Component {
               itemStyle={{backgroundColor:'#f0f0f0'}}
               onChange={date => this.setState({ date })}
           >
-              <List.Item arrow="horizontal"> </List.Item>
+            <List.Item arrow="horizontal"> </List.Item>
           </DatePicker>
+        </div>
+        <div style={{marginTop:'104px'}}>
           <AnalysisOfTheSavingsAndLoan />
           <WhiteSpace size="lg" />
           <Deposits/>
           <LoansMade/>
-
-
-
-
-
+        </div>
       </div>
     );
   }

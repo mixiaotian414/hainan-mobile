@@ -87,8 +87,8 @@ module.exports = {
 
 
   [`POST /gateway/indexList.json`] (req, res) {
-    const query = req.body.indexArray
-console.log(query,'query')
+    const query = req.body.indexArray;
+    console.log(query,'query');
       res.status(200).json({
           RSP_HEAD:{TRAN_SUCCESS:'1'},
           RSP_BODY:{
