@@ -1,5 +1,5 @@
 import React from 'react';
-import { province } from 'antd-mobile-demo-data';
+import  province  from './utilsdata';
 import { StickyContainer, Sticky } from 'react-sticky';
 import { ListView, List, SearchBar,Radio,Checkbox} from 'antd-mobile';
 import request  from '../../utils/request'
@@ -52,7 +52,7 @@ export default class LetterIndex extends React.Component {
         const hei = document.documentElement.clientHeight;
         // simulate initial Ajax
 
-        this.firstfetch()
+      /*  this.firstfetch()*/
 
         setTimeout(() => {
             this.setState({

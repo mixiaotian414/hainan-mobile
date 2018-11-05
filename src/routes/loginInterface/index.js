@@ -20,8 +20,8 @@ export default class loginInterface extends React.Component {
             <div style={{backgroundColor:'#fff',height:'100vh'}} className='login'>
                 <NavBar
                     mode="light"
-                    icon={<Icon type="left" />}
-                    onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/IndexPage"));}}
+                 /*   icon={<Icon type="left" />}
+                    onLeftClick={() =>{ this.props.dispatch(routerRedux.push("/IndexPage"));}}*/
                     rightContent={[
                         <div style={{color:'#666'}}>我要注册</div>
                     ]}
@@ -34,7 +34,7 @@ export default class loginInterface extends React.Component {
                 <Hurdle/>
                 <WhiteSpace size="lg" />
                 <WingBlank>
-                    <Button type="primary">安全登录</Button><WhiteSpace />
+                    <Button type="primary" onClick={()=>{this.props.dispatch(routerRedux.push('/IndexPage'));}}>安全登录</Button><WhiteSpace />
                 </WingBlank>
                 <WhiteSpace size="lg" />
                 <WingBlank>

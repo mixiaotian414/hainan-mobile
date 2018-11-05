@@ -6,6 +6,64 @@
   .myFavorite{
     .am-list-item{
       background-color: #ffffff;
+      height: 60px;
+    }
+    @media (min-resolution: 2dppx) {
+      html:not([data-scale]) .am-button-ghost {
+        position: relative;
+        border: none;
+      }
+      html:not([data-scale]) .am-button-ghost::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200%;
+        height: 200%;
+        border: 2PX solid #108ee9;
+        border-radius: 10px;
+        transform-origin: 0 0;
+        transform: scale(0.5);
+        box-sizing: border-box;
+        pointer-events: none;
+      }
+    }
+
+    .am-list-body {
+      position: relative;
+      background-color: #fff;
+      border-top: 1PX solid #e5e5e5;
+      border-bottom: 1PX solid #e5e5e5;
+
+    }
+
+    .am-list-item {
+      position: relative;
+      display: flex;
+      padding-left: 15px;
+      min-height: 80px;
+      background-color:  #fff;
+      vertical-align: middle;
+      overflow: hidden;
+      transition: background-color 200ms;
+      align-items: center;
+      /* list左图片显示*/
+    }
+    .am-list-item img {
+      width: 42px;
+      height: 42px;
+      vertical-align: middle;
+    }
+
+    .am-list-item .am-list-line .am-list-brief {
+      color: #fd7301;
+      font-size: 22px;
+      line-height: 1.5;
+      margin-top: 6px;
+      width: auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 }

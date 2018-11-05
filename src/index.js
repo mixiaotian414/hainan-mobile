@@ -4,7 +4,11 @@ import router from './router';
 import './index.css';
 
 const app = dva();
+/*
 models.map(m => app.model(m));
+*/
 
+// 2. Model
+app.model(require('./models/todo'))
 app.router(router);
 app.start('#root');

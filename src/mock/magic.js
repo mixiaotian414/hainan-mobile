@@ -88,7 +88,7 @@ module.exports = {
 
     [`POST /gateway/magiclist.json`] (req, res) {
         const query = req.body.indexArray
-        console.log(query,'query')
+    /*    console.log(query,'query')*/
         res.status(200).json({
             RSP_HEAD:{TRAN_SUCCESS:'1'},
             RSP_BODY:{

@@ -21,13 +21,40 @@ export default class AddAttention extends React.Component {
       const { app,location } = this.props;
       const query  =location.query;
       console.log(query,'query');
-      this.fetch(query)
-
+   /*   this.fetch(query)*/
+      this.testDemo()
   }
+    testDemo=()=>{//demo样例
+      let list =[
+          {index:1,value:1254.85,text:'表内存款'},
+          {index:2,value:625.35,text:'储蓄存款'},
+          {index:3,value:3577.85,text:'对公存款'},
+          {index:4,value:654.32,text:'负债总额'},
+          {index:5,value:13587.83,text:'表内存款'},
+          {index:6,value:788.33,text:'表内存款'},
+          {index:6,value:788.33,text:'表内存款'},
+          {index:6,value:788.33,text:'表内存款'},
+          {index:6,value:788.33,text:'表内存款'},
+          {index:6,value:788.33,text:'表内存款'},
+          {index:6,value:788.33,text:'表内存款'},
+          {index:6,value:788.33,text:'表内存款'},
+          {index:6,value:788.33,text:'表内存款'},
+          {index:6,value:788.33,text:'表内存款'},
+          {index:6,value:788.33,text:'表内存款'},
+      ]
+        setTimeout(()=>{
+          this.setState({list})
+        },600)
 
-    fetch = (value) => {
+
+    }
+
+
+
+
+    fetch = (value) => {//生产用
         this.promise = request({
-            url:"/gateway/indexList.json",
+                url:"/gateway/indexList.json",
             method: 'post',
             data: {
                 indexArray:value,

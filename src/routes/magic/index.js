@@ -22,8 +22,17 @@ export default class Magic extends React.Component {
         const { app,location } = this.props;
         const query  =location.query;
         console.log(query,'query')
-        this.fetch(query)
+       /* this.fetch(query)*/
+        this.testDemo()
+    }
 
+    testDemo=()=>{
+        let list=[
+            {num:1520.63,value1:'1.61▲',percent1:'0.16%',value2:'1.84▲',percent2:'0.06%',value3:'1.55▲',percent3:'0.19%',value4:'1.33▲',percent4:'0.25%'},
+        ]
+        setTimeout(()=>{
+            this.setState({data:list[0]})
+        },600)
     }
 
     fetch = (value) => {
