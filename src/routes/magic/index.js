@@ -62,50 +62,54 @@ export default class Magic extends React.Component {
         const data =this.state.data;
 
     return (
-      <div>
-        <NavBar
-          mode="light"
-          icon={<Icon type="left" />}
-          onLeftClick={() =>{
-              this.props.history.go(-1);
-              this.props.dispatch(
-                  routerRedux.push({
-                          // pathname:'/addAttention',
-                          query:""
-                      }
-                  )
-              );}
-          }
-        >魔术狮</NavBar>
-          <WhiteSpace size="lg" />
-          {
-
-          }<div className={style.topTip}>
-                  <span >{data.num}</span>
+      <div style={{overflowY:'hidden'}}>
+          <div  style={{position:'fixed',zIndex:'5',width:'100%',top:'0',right:'0'}}>
+              <NavBar
+                  mode="light"
+                  icon={<Icon type="left" />}
+                  style={{position:'relative',zIndex:'10'}}
+                  onLeftClick={() =>{
+                      this.props.history.go(-1);
+                      this.props.dispatch(
+                          routerRedux.push({
+                                  // pathname:'/addAttention',
+                                  query:""
+                              }
+                          )
+                      );}
+                  }
+              >魔术狮</NavBar>
           </div>
-          <WhiteSpace size="lg" />
-          <div className={style.listTable}>
-          <Flex justify="between">
-              <span>比上日</span>
-              <span className={style.num}>{data.value1}</span>
-              <span className={style.num}>{data.percent1}</span>
-          </Flex> <Flex justify="between">
-              <span>比上月</span>
-              <span className={style.num}>{data.value2}</span>
-              <span className={style.num}>{data.percent2}</span>
-          </Flex> <Flex justify="between">
-              <span>比年初</span>
-              <span className={style.num}>{data.value3}</span>
-              <span className={style.num}>{data.percent3}</span>
-          </Flex> <Flex justify="between">
-              <span>比同期</span>
-              <span className={style.num}>{data.value4}</span>
-              <span className={style.num}>{data.percent4}</span>
-          </Flex>
-          </div>
-        <WhiteSpace size="lg" />
+          <div style={{marginTop:'60px'}}>
+              <WhiteSpace size="lg" />
+              {
 
-          <DepositTrend/>
+              }<div className={style.topTip}>
+              <span >{data.num}</span>
+          </div>
+              <WhiteSpace size="lg" />
+              <div className={style.listTable}>
+                  <Flex justify="between">
+                      <span>比上日</span>
+                      <span className={style.num}>{data.value1}</span>
+                      <span className={style.num}>{data.percent1}</span>
+                  </Flex> <Flex justify="between">
+                  <span>比上月</span>
+                  <span className={style.num}>{data.value2}</span>
+                  <span className={style.num}>{data.percent2}</span>
+              </Flex> <Flex justify="between">
+                  <span>比年初</span>
+                  <span className={style.num}>{data.value3}</span>
+                  <span className={style.num}>{data.percent3}</span>
+              </Flex> <Flex justify="between">
+                  <span>比同期</span>
+                  <span className={style.num}>{data.value4}</span>
+                  <span className={style.num}>{data.percent4}</span>
+              </Flex>
+              </div>
+              <WhiteSpace size="lg" />
+              <DepositTrend/>
+          </div>
       </div>
     );
   }

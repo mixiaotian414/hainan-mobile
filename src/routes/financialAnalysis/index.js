@@ -33,7 +33,7 @@ export default class FinancialAnalysis extends React.Component {
           { title: <Badge dot>发展能力</Badge> },
     ];
     return (
-        <div style={{height:document.documentElement.offsetHeight}}>
+        <div style={{overflowY:'hidden'}}>
           <div  style={{position:'fixed',zIndex:'5',width:'100%',top:'0',right:'0'}}>
               <NavBar
                   mode="light"
@@ -58,7 +58,7 @@ export default class FinancialAnalysis extends React.Component {
                     onChange={(tab, index) => { console.log('onChange', index, tab); }}
                     onTabClick={(tab, index) => { console.log('onTabClick', index, tab); }}
               >
-                  <div style={{  backgroundColor: '#fff' }}>
+                  <div style={{  backgroundColor: '#fff',height:document.documentElement.offsetHeight}}>
                       <WhiteSpace size="lg" />
                       <OperatingMargin />
                       <WhiteSpace size="lg" />

@@ -13,6 +13,7 @@ const TotalAssets = () => {
     }
     const getOtion = () => {
         const option = {
+            backgroundColor:'#fff',
             title:{
                 text: '资产总额',
                 x:'15px',

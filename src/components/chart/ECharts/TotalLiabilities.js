@@ -13,6 +13,7 @@ const TotalLiabilities = () => {
     }
     const getOtion = () => {
         const option = {
+            backgroundColor:'#fff',
             title:{
                 text: '负债总额',
                 x:'15px',

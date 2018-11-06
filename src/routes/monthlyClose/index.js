@@ -27,8 +27,8 @@ export default class MonthlyClose extends React.Component {
           { title: <Badge dot>收入支出</Badge> },
     ];
     return (
-      <div>
-          <div  style={{position:'fixed',zIndex:'5',width:'100%',top:'0',right:'0',height:document.documentElement.offsetHeight}}>
+      <div style={{overflowY:'hidden'}}>
+          <div  style={{position:'fixed',zIndex:'5',width:'100%',top:'0',right:'0'}}>
               <NavBar
                   mode="light"
                   icon={<Icon type="left" />}
@@ -45,14 +45,14 @@ export default class MonthlyClose extends React.Component {
                   <List.Item arrow="horizontal"> </List.Item>
               </DatePicker>
           </div>
-          <div style={{marginTop:'104px',height:document.documentElement.offsetHeight}}>
+          <div style={{marginTop:'104px'}}>
               <div>
                   <Tabs tabs={tabs}
                         initialPage={0}
                         onChange={(tab, index) => { console.log('onChange', index, tab); }}
                         onTabClick={(tab, index) => { console.log('onTabClick', index, tab); }}
                   >
-                      <div style={{  backgroundColor: '#fff' }}>
+                      <div style={{  backgroundColor: '#fff' ,height:document.documentElement.offsetHeight}}>
                           <WhiteSpace size="lg" />
                           <TotalAssets />
                           <WhiteSpace size="lg" />
@@ -60,8 +60,15 @@ export default class MonthlyClose extends React.Component {
 
 
                       </div>
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }}>
-                          Content of second tab
+                      <div style={{ backgroundColor: '#fff',height:document.documentElement.offsetHeight }}>
+                          <WhiteSpace size="lg" />
+                          <TotalAssets />
+                          <WhiteSpace size="lg" />
+                          <TotalLiabilities />
+                          <WhiteSpace size="lg" />
+                          <TotalAssets />
+                          <WhiteSpace size="lg" />
+                          <TotalLiabilities />
                       </div>
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }}>
                           Content of third tab

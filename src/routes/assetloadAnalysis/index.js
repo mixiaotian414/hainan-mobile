@@ -26,7 +26,7 @@ export default class AssetloadAnalysis extends React.Component {
   render() {
     const { app } = this.props;
     return (
-      <div>
+      <div style={{overflowY:'hidden'}}>
           <div  style={{position:'fixed',zIndex:'5',width:'100%',top:'0',right:'0'}}>
               <NavBar
                   mode="light"
