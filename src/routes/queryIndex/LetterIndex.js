@@ -184,6 +184,7 @@ export default class LetterIndex extends React.Component {
                 delayTime={10}
                 delayActivityIndicator={<div style={{ padding: 25, textAlign: 'center' }}>rendering...</div>}
             />
+            <div style={{height:'47px'}}/>
         </div>);
     }
 }

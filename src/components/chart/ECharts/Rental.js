@@ -52,7 +52,7 @@ const Rental = () => {
                             position: 'center'
                         },
                         emphasis: {
-                            show: true,
+                            show: false,
                             textStyle: {
                                 fontSize: '14',
                                 fontWeight: 'normal'

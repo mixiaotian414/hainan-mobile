@@ -31,8 +31,13 @@ body {
   .am-grid {
     .am-flexbox{
       background: none;
-      border: 0 solid #dcdcdc;
     }
+  }
+  .am-grid.am-grid-line:not(.am-grid-carousel){
+    border-width:0;
+  }
+  .am-grid.am-grid-line .am-flexbox{
+    border-width:0;
   }
   .ant-breadcrumb {
     & > span {
