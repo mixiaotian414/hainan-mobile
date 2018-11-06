@@ -31,7 +31,7 @@ export default class TableList extends React.Component {
         >驾驶舱</NavBar>
         <DatePicker
           mode="date"
-          title="Select Date"
+          title="日期选择"
           extra="Optional"
           value={this.state.date}
           onChange={date => this.setState({ date })}

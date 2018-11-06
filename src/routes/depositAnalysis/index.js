@@ -24,7 +24,7 @@ export default class DepositAnalysis extends React.Component {
 
     const { app } = this.props;
     return (
-      <div>
+      <div style={{overflowY:'hidden'}}>
         <div  style={{position:'fixed',zIndex:'5',width:'100%',top:'0',right:'0'}}>
           <NavBar
               mode="light"
@@ -33,7 +33,7 @@ export default class DepositAnalysis extends React.Component {
           >存贷分析</NavBar>
           <DatePicker
               mode="date"
-              title="Select Date"
+              title="日期选择"
               extra="Optional"
               value={this.state.date}
               itemStyle={{backgroundColor:'#f0f0f0'}}

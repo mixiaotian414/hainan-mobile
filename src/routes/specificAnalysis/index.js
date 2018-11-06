@@ -31,7 +31,7 @@ export default class SpecificAnalysis extends React.Component {
     const { app } = this.props;
 
     return (
-      <div style={{overflowY:'hidden'}}>
+      <div style={{overflowY:'hidden',height:document.documentElement.offsetHeight}}>
         <NavBar
           mode="light"
           icon={<Icon type="left" />}

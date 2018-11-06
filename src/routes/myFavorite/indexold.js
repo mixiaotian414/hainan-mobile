@@ -34,7 +34,7 @@ export default class MyFavorite extends React.Component {
                 >我的收藏</NavBar>
                 <DatePicker
                     mode="date"
-                    title="Select Date"
+                    title="日期选择"
                     extra="Optional"
                     value={this.state.date}
                     itemStyle={{backgroundColor:'#f0f0f0'}}

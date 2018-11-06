@@ -28,7 +28,7 @@ export default class MonthlyClose extends React.Component {
     ];
     return (
       <div>
-          <div  style={{position:'fixed',zIndex:'5',width:'100%',top:'0',right:'0'}}>
+          <div  style={{position:'fixed',zIndex:'5',width:'100%',top:'0',right:'0',height:document.documentElement.offsetHeight}}>
               <NavBar
                   mode="light"
                   icon={<Icon type="left" />}
@@ -36,7 +36,7 @@ export default class MonthlyClose extends React.Component {
               >每月关注</NavBar>
               <DatePicker
                   mode="date"
-                  title="Select Date"
+                  title="日期选择"
                   extra="Optional"
                   value={this.state.date}
                   itemStyle={{backgroundColor:'#f0f0f0'}}
@@ -45,7 +45,7 @@ export default class MonthlyClose extends React.Component {
                   <List.Item arrow="horizontal"> </List.Item>
               </DatePicker>
           </div>
-          <div style={{marginTop:'104px'}}>
+          <div style={{marginTop:'104px',height:document.documentElement.offsetHeight}}>
               <div>
                   <Tabs tabs={tabs}
                         initialPage={0}

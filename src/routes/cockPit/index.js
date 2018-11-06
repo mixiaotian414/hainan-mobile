@@ -21,7 +21,7 @@ export default class CookPit extends React.Component {
   render() {
     const { app } = this.props;
     return (
-      <div>
+      <div style={{height:document.documentElement.offsetHeight}}>
           <div  style={{position:'fixed',zIndex:'5',width:'100%',top:'0',right:'0'}}>
               <NavBar
                   mode="light"
@@ -31,7 +31,7 @@ export default class CookPit extends React.Component {
               >驾驶舱</NavBar>
               <DatePicker
                   mode="date"
-                  title="Select Date"
+                  title="日期选择"
                   extra="Optional"
                   value={this.state.date}
                   itemStyle={{backgroundColor:'#f0f0f0'}}
