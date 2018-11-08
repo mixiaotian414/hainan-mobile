@@ -9,6 +9,7 @@ models.map(m => app.model(m));
 */
 
 // 2. Model
-app.model(require('./models/todo'))
+/*app.model(require('./models/todo'))*/
+app.model(require('./models/app'))
 app.router(router);
 app.start('#root');
