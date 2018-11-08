@@ -55,7 +55,7 @@ function RouterConfig({ history, app }) {
   return (
     <Router history={history}>
       <Switch>
-        <Route exact path="/" render={() => (<Redirect to="/loginInterface" />)} />
+        <Route exact path="/" render={() => (<Redirect to="/IndexPage" />)} />
         {routes.map(({ path, ...dynamics }, key) => (
           <Route
             exact
